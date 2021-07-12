@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jaroslav Nahodil - frontend kodér junior</title>
+  <style>
+    @font-face {
+      font-family: 'AnonymousPro-Bold';
+      src: url(dist/font/AnonymousPro-Bold.ttf);
+    }
+    
+    @keyframes animate-dots {
+      0% {
+        content: '';
+      }
+
+      34% {
+        content: '.';
+      }
+
+      67% {
+        content: '..';
+      }
+
+      100% {
+        content: '...';
+      }
+    }
+
+    body {
+      background-color: #64643d;
+      color: #f5f5ef;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+    }
+
+    .center-full-page {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      vertical-align: middle;
+    }
+
+    .title {
+      font-family: 'AnonymousPro-Bold', 'Arial Black', sans-serif;
+      padding: 0 7.5vw;
+    }
+
+    .title--main {
+      font-size: 10vw;
+      margin-top: -1rem;
+    }
+
+    .dots-container {
+      display: inline-flex;
+      position: relative;
+    }
+
+    .dots-hidden {
+      visibility: hidden;
+    }
+
+    .dots-animation {
+      display: block;
+      position: absolute;
+      left: 0;
+    }
+
+    .dots-animation::before {
+      display: block;
+      content: '';
+      animation-name: animate-dots;
+      animation-delay: 500ms;
+      animation-duration: 900ms;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+
+    
+    @media only screen and (min-width: 501px) {
+      .title--main {
+        font-size: 5.5vw;
+      } 
+    }
+
+    @media only screen and (min-width: 991px) {
+      .title--main {
+        font-size: 5vw;
+      }
+    }
+
+    @media only screen and (min-width: 1271px) {
+      .title--main {
+        font-size: 4.17vw;
+      } 
+    }
+  </style>
+</head>
+<body>
+  <div class="center-full-page">
+    <h1 class="title title--main">
+      Webové stránky ve&nbsp;vývoji
+      <div class="dots-container">
+        <span class="dots-hidden">...</span>
+        <span class="dots-animation"><span>
+      </div>
+    </h1>
+  </div>
+</body>
+</html>
